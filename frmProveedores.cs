@@ -206,7 +206,7 @@ namespace pryLopezIEvaluativa
 
             if (!grillaCreada)
             {
-                StreamReader sr = new StreamReader("C:\\Users\\PC\\Desktop\\IES\\pryLopezIEvaluativa\\Resources");
+                StreamReader sr = new StreamReader("../../Resources");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -235,7 +235,7 @@ namespace pryLopezIEvaluativa
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
 
-                StreamReader sr = new StreamReader("C:\\Users\\PC\\Desktop\\IES\\pryLopezIEvaluativa\\Resources");
+                StreamReader sr = new StreamReader("../../Resources");
 
                 string leerLinea;
                 string[] separarDatos;
