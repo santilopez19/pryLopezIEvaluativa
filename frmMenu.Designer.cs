@@ -33,6 +33,7 @@
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cargarProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msProveedores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,8 @@
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listaDeProveedoresToolStripMenuItem});
+            this.listaDeProveedoresToolStripMenuItem,
+            this.cargarProveedorToolStripMenuItem});
             this.proveedoresToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
             this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
@@ -80,6 +82,13 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // cargarProveedorToolStripMenuItem
+            // 
+            this.cargarProveedorToolStripMenuItem.Name = "cargarProveedorToolStripMenuItem";
+            this.cargarProveedorToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.cargarProveedorToolStripMenuItem.Text = "Cargar Proveedor";
+            this.cargarProveedorToolStripMenuItem.Click += new System.EventHandler(this.cargarProveedorToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -107,5 +116,6 @@
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeProveedoresToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem cargarProveedorToolStripMenuItem;
     }
 }

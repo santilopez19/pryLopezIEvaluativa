@@ -23,5 +23,13 @@ namespace pryLopezIEvaluativa
             this.Hide();
             Proveedores.Show();
         }
+
+        private void cargarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            frmCargarProveedor CargarProveedores = new frmCargarProveedor();
+            this.Hide();
+            CargarProveedores.Show();
+        }
     }
 }

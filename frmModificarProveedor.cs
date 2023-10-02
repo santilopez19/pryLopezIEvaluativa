@@ -67,5 +67,13 @@ namespace pryLopezIEvaluativa
         {
 
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+
+            frmMenu Menusovich = new frmMenu();
+            this.Hide();
+            Menusovich.Show();
+        }
     }
 }

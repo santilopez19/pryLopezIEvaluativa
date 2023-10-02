@@ -46,6 +46,7 @@
             this.txtModificarDireccion = new System.Windows.Forms.TextBox();
             this.txtModificarLiquidadorResponsable = new System.Windows.Forms.TextBox();
             this.btnGrabar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLiquidadorResponsable
@@ -130,7 +131,7 @@
             // 
             // txtModificarNumero
             // 
-            this.txtModificarNumero.Location = new System.Drawing.Point(242, 24);
+            this.txtModificarNumero.Location = new System.Drawing.Point(255, 24);
             this.txtModificarNumero.Multiline = true;
             this.txtModificarNumero.Name = "txtModificarNumero";
             this.txtModificarNumero.Size = new System.Drawing.Size(289, 22);
@@ -138,7 +139,7 @@
             // 
             // txtModificarEntidad
             // 
-            this.txtModificarEntidad.Location = new System.Drawing.Point(242, 62);
+            this.txtModificarEntidad.Location = new System.Drawing.Point(255, 62);
             this.txtModificarEntidad.Multiline = true;
             this.txtModificarEntidad.Name = "txtModificarEntidad";
             this.txtModificarEntidad.Size = new System.Drawing.Size(289, 22);
@@ -146,7 +147,7 @@
             // 
             // txtModificarApertura
             // 
-            this.txtModificarApertura.Location = new System.Drawing.Point(242, 100);
+            this.txtModificarApertura.Location = new System.Drawing.Point(255, 100);
             this.txtModificarApertura.Multiline = true;
             this.txtModificarApertura.Name = "txtModificarApertura";
             this.txtModificarApertura.Size = new System.Drawing.Size(289, 22);
@@ -154,7 +155,7 @@
             // 
             // txtModificarNExpediente
             // 
-            this.txtModificarNExpediente.Location = new System.Drawing.Point(242, 138);
+            this.txtModificarNExpediente.Location = new System.Drawing.Point(255, 138);
             this.txtModificarNExpediente.Multiline = true;
             this.txtModificarNExpediente.Name = "txtModificarNExpediente";
             this.txtModificarNExpediente.Size = new System.Drawing.Size(289, 22);
@@ -162,7 +163,7 @@
             // 
             // txtModificarJuzgado
             // 
-            this.txtModificarJuzgado.Location = new System.Drawing.Point(242, 176);
+            this.txtModificarJuzgado.Location = new System.Drawing.Point(255, 176);
             this.txtModificarJuzgado.Multiline = true;
             this.txtModificarJuzgado.Name = "txtModificarJuzgado";
             this.txtModificarJuzgado.Size = new System.Drawing.Size(289, 22);
@@ -170,7 +171,7 @@
             // 
             // txtModificarJurisdiccion
             // 
-            this.txtModificarJurisdiccion.Location = new System.Drawing.Point(242, 214);
+            this.txtModificarJurisdiccion.Location = new System.Drawing.Point(255, 214);
             this.txtModificarJurisdiccion.Multiline = true;
             this.txtModificarJurisdiccion.Name = "txtModificarJurisdiccion";
             this.txtModificarJurisdiccion.Size = new System.Drawing.Size(289, 22);
@@ -178,7 +179,7 @@
             // 
             // txtModificarDireccion
             // 
-            this.txtModificarDireccion.Location = new System.Drawing.Point(242, 252);
+            this.txtModificarDireccion.Location = new System.Drawing.Point(255, 252);
             this.txtModificarDireccion.Multiline = true;
             this.txtModificarDireccion.Name = "txtModificarDireccion";
             this.txtModificarDireccion.Size = new System.Drawing.Size(289, 22);
@@ -186,7 +187,7 @@
             // 
             // txtModificarLiquidadorResponsable
             // 
-            this.txtModificarLiquidadorResponsable.Location = new System.Drawing.Point(242, 290);
+            this.txtModificarLiquidadorResponsable.Location = new System.Drawing.Point(255, 290);
             this.txtModificarLiquidadorResponsable.Multiline = true;
             this.txtModificarLiquidadorResponsable.Name = "txtModificarLiquidadorResponsable";
             this.txtModificarLiquidadorResponsable.Size = new System.Drawing.Size(289, 22);
@@ -202,12 +203,26 @@
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVolver.Location = new System.Drawing.Point(35, 333);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(100, 28);
+            this.btnVolver.TabIndex = 44;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmModificarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(579, 371);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.lblLiquidadorResponsable);
             this.Controls.Add(this.lblDireccion);
@@ -255,5 +270,6 @@
         public System.Windows.Forms.TextBox txtModificarDireccion;
         public System.Windows.Forms.TextBox txtModificarLiquidadorResponsable;
         public System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

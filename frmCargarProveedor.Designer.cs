@@ -46,6 +46,7 @@
             this.txtGuardarDireccion = new System.Windows.Forms.TextBox();
             this.txtGuardarLiquidadorResponsable = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLiquidadorResponsable
@@ -130,7 +131,7 @@
             // 
             // txtGuardarNumero
             // 
-            this.txtGuardarNumero.Location = new System.Drawing.Point(238, 22);
+            this.txtGuardarNumero.Location = new System.Drawing.Point(258, 24);
             this.txtGuardarNumero.Multiline = true;
             this.txtGuardarNumero.Name = "txtGuardarNumero";
             this.txtGuardarNumero.Size = new System.Drawing.Size(289, 22);
@@ -138,7 +139,7 @@
             // 
             // txtGuardarEntidad
             // 
-            this.txtGuardarEntidad.Location = new System.Drawing.Point(238, 60);
+            this.txtGuardarEntidad.Location = new System.Drawing.Point(258, 62);
             this.txtGuardarEntidad.Multiline = true;
             this.txtGuardarEntidad.Name = "txtGuardarEntidad";
             this.txtGuardarEntidad.Size = new System.Drawing.Size(289, 22);
@@ -146,7 +147,7 @@
             // 
             // txtGuardarApertura
             // 
-            this.txtGuardarApertura.Location = new System.Drawing.Point(238, 98);
+            this.txtGuardarApertura.Location = new System.Drawing.Point(258, 100);
             this.txtGuardarApertura.Multiline = true;
             this.txtGuardarApertura.Name = "txtGuardarApertura";
             this.txtGuardarApertura.Size = new System.Drawing.Size(289, 22);
@@ -154,7 +155,7 @@
             // 
             // txtGuardarNExpediente
             // 
-            this.txtGuardarNExpediente.Location = new System.Drawing.Point(238, 136);
+            this.txtGuardarNExpediente.Location = new System.Drawing.Point(258, 138);
             this.txtGuardarNExpediente.Multiline = true;
             this.txtGuardarNExpediente.Name = "txtGuardarNExpediente";
             this.txtGuardarNExpediente.Size = new System.Drawing.Size(289, 22);
@@ -162,7 +163,7 @@
             // 
             // txtGuardarJuzgado
             // 
-            this.txtGuardarJuzgado.Location = new System.Drawing.Point(238, 174);
+            this.txtGuardarJuzgado.Location = new System.Drawing.Point(258, 176);
             this.txtGuardarJuzgado.Multiline = true;
             this.txtGuardarJuzgado.Name = "txtGuardarJuzgado";
             this.txtGuardarJuzgado.Size = new System.Drawing.Size(289, 22);
@@ -170,7 +171,7 @@
             // 
             // txtGuardarJurisdiccion
             // 
-            this.txtGuardarJurisdiccion.Location = new System.Drawing.Point(238, 212);
+            this.txtGuardarJurisdiccion.Location = new System.Drawing.Point(258, 214);
             this.txtGuardarJurisdiccion.Multiline = true;
             this.txtGuardarJurisdiccion.Name = "txtGuardarJurisdiccion";
             this.txtGuardarJurisdiccion.Size = new System.Drawing.Size(289, 22);
@@ -178,7 +179,7 @@
             // 
             // txtGuardarDireccion
             // 
-            this.txtGuardarDireccion.Location = new System.Drawing.Point(238, 250);
+            this.txtGuardarDireccion.Location = new System.Drawing.Point(258, 252);
             this.txtGuardarDireccion.Multiline = true;
             this.txtGuardarDireccion.Name = "txtGuardarDireccion";
             this.txtGuardarDireccion.Size = new System.Drawing.Size(289, 22);
@@ -186,7 +187,7 @@
             // 
             // txtGuardarLiquidadorResponsable
             // 
-            this.txtGuardarLiquidadorResponsable.Location = new System.Drawing.Point(238, 288);
+            this.txtGuardarLiquidadorResponsable.Location = new System.Drawing.Point(258, 290);
             this.txtGuardarLiquidadorResponsable.Multiline = true;
             this.txtGuardarLiquidadorResponsable.Name = "txtGuardarLiquidadorResponsable";
             this.txtGuardarLiquidadorResponsable.Size = new System.Drawing.Size(289, 22);
@@ -202,12 +203,26 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVolver.Location = new System.Drawing.Point(31, 330);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(100, 28);
+            this.btnVolver.TabIndex = 60;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmCargarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(575, 378);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblLiquidadorResponsable);
             this.Controls.Add(this.lblDireccion);
@@ -225,8 +240,10 @@
             this.Controls.Add(this.txtGuardarJurisdiccion);
             this.Controls.Add(this.txtGuardarDireccion);
             this.Controls.Add(this.txtGuardarLiquidadorResponsable);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCargarProveedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proveedor";
             this.Load += new System.EventHandler(this.frmMostrarProveedor_Load);
             this.ResumeLayout(false);
@@ -253,5 +270,6 @@
         public System.Windows.Forms.TextBox txtGuardarDireccion;
         public System.Windows.Forms.TextBox txtGuardarLiquidadorResponsable;
         public System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
