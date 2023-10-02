@@ -17,7 +17,7 @@ namespace pryLopezIEvaluativa
             InitializeComponent();
         }
 
-        public static string rutaArchivo = "../../Resources/Carpetas de Proveedores/Datos Proveedores/datosProveedorConPuntoComa.txt";
+        public static string rutaArchivo = "../../Resources/Listado_de_aseguradores.csv";
         public void btnGrabar_Click(object sender, EventArgs e)
         {
             string posicion = frmProveedores.pos.ToString();
@@ -49,7 +49,7 @@ namespace pryLopezIEvaluativa
                 }
             }
 
-            MessageBox.Show("Proveedor Modificado con exito");
+            MessageBox.Show("Proveedor Modificado");
             this.Hide();
 
             txtModificarNumero.Clear();

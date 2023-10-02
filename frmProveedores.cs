@@ -24,7 +24,7 @@ namespace pryLopezIEvaluativa
         {
             TreeNode rootNode;
 
-            DirectoryInfo info = new DirectoryInfo(@"../../Resources/Proveedores");
+            DirectoryInfo info = new DirectoryInfo(@"../../Resources/Listado_de_aseguradores.csv");
             if (info.Exists)
             {
                 rootNode = new TreeNode(info.Name);
@@ -106,8 +106,7 @@ namespace pryLopezIEvaluativa
 
             if (!grillaCreada)
             {
-                // Leemos el archivo de texto y creamos la grilla
-                StreamReader sr = new StreamReader("../../Resources/Carpetas de Proveedores/Datos Proveedores/datosProveedorConPuntoComa.txt");
+                StreamReader sr = new StreamReader("../../Resources/Listado_de_aseguradores.csv");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -133,11 +132,10 @@ namespace pryLopezIEvaluativa
             }
             else
             {
-                // Actualizamos los datos de la grilla
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
 
-                StreamReader sr = new StreamReader("../../Resources/Carpetas de Proveedores/Datos Proveedores/datosProveedorConPuntoComa.txt");
+                StreamReader sr = new StreamReader("../../Resources/Listado_de_aseguradores.csv");
 
                 string leerLinea;
                 string[] separarDatos;
