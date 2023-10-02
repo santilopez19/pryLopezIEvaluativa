@@ -17,7 +17,7 @@ namespace pryLopezIEvaluativa
             InitializeComponent();
         }
 
-        public static string rutaArchivo = "../../Resources/Listado_de_aseguradores.csv";
+        public static string rutaArchivo = "../../Resources";
         public void btnGrabar_Click(object sender, EventArgs e)
         {
             string posicion = frmProveedores.pos.ToString();

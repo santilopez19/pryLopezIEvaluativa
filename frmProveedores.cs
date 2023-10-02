@@ -24,7 +24,7 @@ namespace pryLopezIEvaluativa
         {
             TreeNode rootNode;
 
-            DirectoryInfo info = new DirectoryInfo(@"../../Resources/Listado_de_aseguradores.csv");
+            DirectoryInfo info = new DirectoryInfo(@"../../Resources");
             if (info.Exists)
             {
                 rootNode = new TreeNode(info.Name);
@@ -106,7 +106,7 @@ namespace pryLopezIEvaluativa
 
             if (!grillaCreada)
             {
-                StreamReader sr = new StreamReader("../../Resources/Listado_de_aseguradores.csv");
+                StreamReader sr = new StreamReader("../../Resources");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -135,7 +135,7 @@ namespace pryLopezIEvaluativa
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
 
-                StreamReader sr = new StreamReader("../../Resources/Listado_de_aseguradores.csv");
+                StreamReader sr = new StreamReader("../../Resources");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -155,13 +155,8 @@ namespace pryLopezIEvaluativa
                     dgvProveedores.Rows.Add(separarDatos);
 
                 }
-
                 sr.Close();
-
-                MessageBox.Show("Grilla Actualizada");
             }
-
-
         }
         public static int pos = 0;
         private void dgvProveedores_CellClick(object sender, DataGridViewCellEventArgs e)

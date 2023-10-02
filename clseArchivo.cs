@@ -11,7 +11,7 @@ namespace pryLopezIEvaluativa
     {
             public void Grabar(string datosConcatenados)
             {
-                StreamWriter AD = new StreamWriter("../../Resources/Listado_de_aseguradores.csv", true);
+                StreamWriter AD = new StreamWriter("../../Resources", true);
                 AD.WriteLine(datosConcatenados); 
                 AD.Close();
             }
