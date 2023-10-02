@@ -18,7 +18,7 @@ namespace pryLopezIEvaluativa
             InitializeComponent();
         }
 
-        public static string rutaArchivo = "../../Resources/Carpetas de Proveedores/Datos Proveedores/datosProveedorConPuntoComa.txt";
+        public static string rutaArchivo = "../../Resources";
         public void btnGrabar_Click(object sender, EventArgs e)
         {
             string posicion = frmProveedores.pos.ToString();

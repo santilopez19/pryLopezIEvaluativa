@@ -108,7 +108,6 @@ namespace pryLopezIEvaluativa
 
             if (!grillaCreada)
             {
-                // Leemos el archivo de texto y creamos la grilla
                 StreamReader sr = new StreamReader("../../Resources");
 
                 string leerLinea;
@@ -135,7 +134,6 @@ namespace pryLopezIEvaluativa
             }
             else
             {
-                // Actualizamos los datos de la grilla
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
 
@@ -208,7 +206,7 @@ namespace pryLopezIEvaluativa
 
             if (!grillaCreada)
             {
-                StreamReader sr = new StreamReader("../../Resources/");
+                StreamReader sr = new StreamReader("C:\\Users\\PC\\Desktop\\IES\\pryLopezIEvaluativa\\Resources");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -234,11 +232,10 @@ namespace pryLopezIEvaluativa
             }
             else
             {
-                // Actualizamos los datos de la grilla
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
 
-                StreamReader sr = new StreamReader("../../Resourcest");
+                StreamReader sr = new StreamReader("../../Resources");
 
                 string leerLinea;
                 string[] separarDatos;
