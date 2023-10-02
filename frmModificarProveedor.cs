@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace pryLopezIEvaluativa
 {
@@ -19,7 +18,7 @@ namespace pryLopezIEvaluativa
             InitializeComponent();
         }
 
-        public static string rutaArchivo = "../../Resources";
+        public static string rutaArchivo = "../../Resources/Carpetas de Proveedores/Datos Proveedores/datosProveedorConPuntoComa.txt";
         public void btnGrabar_Click(object sender, EventArgs e)
         {
             string posicion = frmProveedores.pos.ToString();

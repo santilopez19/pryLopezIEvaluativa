@@ -9,8 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.IO;
-using System.Data;
 
 namespace pryLopezIEvaluativa
 {
@@ -27,7 +25,7 @@ namespace pryLopezIEvaluativa
         {
             TreeNode rootNode;
 
-            DirectoryInfo info = new DirectoryInfo(@"../../Resources");
+            DirectoryInfo info = new DirectoryInfo("../../Resources/Carpetas de Proveedores/Datos Proveedores/datosProveedorConPuntoComa.txt");
             if (info.Exists)
             {
                 rootNode = new TreeNode(info.Name);
@@ -109,7 +107,7 @@ namespace pryLopezIEvaluativa
 
             if (!grillaCreada)
             {
-                StreamReader sr = new StreamReader("../../Resources");
+                StreamReader sr = new StreamReader("../../Resources/Carpetas de Proveedores/Datos Proveedores/datosProveedorConPuntoComa.txt");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -138,7 +136,7 @@ namespace pryLopezIEvaluativa
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
 
-                StreamReader sr = new StreamReader("../../Resources");
+                StreamReader sr = new StreamReader("../../Resources/Carpetas de Proveedores/Datos Proveedores/datosProveedorConPuntoComa.txt");
 
                 string leerLinea;
                 string[] separarDatos;

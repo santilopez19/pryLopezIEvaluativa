@@ -96,6 +96,7 @@
             // 
             // dgvProveedores
             // 
+            this.dgvProveedores.AllowUserToOrderColumns = true;
             this.dgvProveedores.BackgroundColor = System.Drawing.Color.White;
             this.dgvProveedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
