@@ -137,7 +137,7 @@ namespace pryLopezIEvaluativa
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
 
-                StreamReader sr = new StreamReader("../../Resources/Carpetas de Proveedores/Datos Proveedores/datosProveedorConPuntoComa.txt");
+                StreamReader sr = new StreamReader("../../Resources");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -235,7 +235,7 @@ namespace pryLopezIEvaluativa
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
 
-                StreamReader sr = new StreamReader("../../Resources");
+                StreamReader sr = new StreamReader("C:\\Users\\PC\\Desktop\\IES\\pryLopezIEvaluativa\\Resources");
 
                 string leerLinea;
                 string[] separarDatos;
