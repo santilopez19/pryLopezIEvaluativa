@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace pryLopezIEvaluativa
 {
-    public partial class frmMostrarProveedor : Form
+    public partial class frmCargarProveedor : Form
     {
-        public frmMostrarProveedor()
+        public frmCargarProveedor()
         {
             InitializeComponent();
+        }
+
+        int numGuia = 6;
+        clsArchivo grabado = new clsArchivo();
+        private void frmMostrarProveedor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
