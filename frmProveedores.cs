@@ -208,7 +208,7 @@ namespace pryLopezIEvaluativa
 
             if (!grillaCreada)
             {
-                StreamReader sr = new StreamReader("../../Resources");
+                StreamReader sr = new StreamReader("../../Resources/");
 
                 string leerLinea;
                 string[] separarDatos;
