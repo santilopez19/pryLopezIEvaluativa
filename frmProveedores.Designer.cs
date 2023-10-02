@@ -53,6 +53,7 @@
             this.tvwProveedores.SelectedImageIndex = 0;
             this.tvwProveedores.Size = new System.Drawing.Size(358, 298);
             this.tvwProveedores.TabIndex = 3;
+            this.tvwProveedores.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvwProveedores_NodeMouseClick);
             // 
             // imageListTreeViewProveedores
             // 
@@ -77,7 +78,9 @@
             this.lstProveedores.TabIndex = 10;
             this.lstProveedores.UseCompatibleStateImageBehavior = false;
             this.lstProveedores.View = System.Windows.Forms.View.Details;
+            this.lstProveedores.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstProveedores_ItemSelectionChanged);
             this.lstProveedores.SelectedIndexChanged += new System.EventHandler(this.lstProveedores_SelectedIndexChanged);
+            this.lstProveedores.StyleChanged += new System.EventHandler(this.lstProveedores_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -106,6 +109,10 @@
             this.dgvProveedores.RowHeadersWidth = 51;
             this.dgvProveedores.Size = new System.Drawing.Size(891, 171);
             this.dgvProveedores.TabIndex = 11;
+            this.dgvProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellClick);
+            this.dgvProveedores.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellClick);
+            this.dgvProveedores.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProveedores_CellClick);
+            this.dgvProveedores.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProveedores_CellClick);
             // 
             // btnVolver
             // 
