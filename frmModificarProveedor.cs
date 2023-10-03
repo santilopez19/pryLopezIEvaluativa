@@ -18,7 +18,7 @@ namespace pryLopezIEvaluativa
             InitializeComponent();
         }
 
-        public static string rutaArchivo = "../../Resources";
+        public static string rutaArchivo = "C:\\Users\\PC\\Source\\repos\\santilopez19\\pryLopezIEvaluativa\\bin\\Debug";
         public void btnGrabar_Click(object sender, EventArgs e)
         {
             string posicion = frmProveedores.pos.ToString();
@@ -51,7 +51,6 @@ namespace pryLopezIEvaluativa
             }
 
             MessageBox.Show("Proveedor Modificado");
-            this.Hide();
 
             txtModificarNumero.Clear();
             txtModificarEntidad.Clear();
@@ -71,7 +70,7 @@ namespace pryLopezIEvaluativa
         private void btnVolver_Click(object sender, EventArgs e)
         {
 
-            frmMenu Menusovich = new frmMenu();
+            frmProveedores Menusovich = new frmProveedores();
             this.Hide();
             Menusovich.Show();
         }

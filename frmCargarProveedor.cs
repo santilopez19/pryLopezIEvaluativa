@@ -107,7 +107,7 @@ namespace pryLopezIEvaluativa
         private void btnVolver_Click(object sender, EventArgs e)
         {
 
-            frmMenu Menusovich = new frmMenu();
+            frmProveedores Menusovich = new frmProveedores();
             this.Hide();
             Menusovich.Show();
         }

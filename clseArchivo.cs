@@ -11,7 +11,7 @@ namespace pryLopezIEvaluativa
     {
             public void Grabar(string datosConcatenados)
             {
-                StreamWriter AD = new StreamWriter("../../Resources", true);
+                StreamWriter AD = new StreamWriter("C:\\Users\\PC\\Source\\repos\\santilopez19\\pryLopezIEvaluativa\\bin\\Debug", true);
                 AD.WriteLine(datosConcatenados); 
                 AD.Close();
             }
