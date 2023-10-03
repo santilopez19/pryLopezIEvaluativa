@@ -17,7 +17,6 @@ namespace pryLopezIEvaluativa
         {
             InitializeComponent();
         }
-
         public static string rutaArchivo = "C:\\Users\\PC\\Source\\repos\\santilopez19\\pryLopezIEvaluativa\\bin\\Debug";
         public void btnGrabar_Click(object sender, EventArgs e)
         {
@@ -29,7 +28,6 @@ namespace pryLopezIEvaluativa
                 while ((linea = leer.ReadLine()) != null)
                 {
                     string[] parametros = linea.Split(';');
-
                     if (parametros[0] != posicion)
                     {
                         lista.Add(linea);
@@ -41,7 +39,6 @@ namespace pryLopezIEvaluativa
                     }
                 }
             }
-
             using (StreamWriter escribir = new StreamWriter(rutaArchivo))
             {
                 foreach (string linea in lista)
@@ -49,9 +46,7 @@ namespace pryLopezIEvaluativa
                     escribir.WriteLine(linea);
                 }
             }
-
             MessageBox.Show("Proveedor Modificado");
-
             txtModificarNumero.Clear();
             txtModificarEntidad.Clear();
             txtModificarApertura.Clear();
@@ -61,15 +56,8 @@ namespace pryLopezIEvaluativa
             txtModificarDireccion.Clear();
             txtModificarLiquidadorResponsable.Clear();
         }
-
-        private void frmModificarProveedor_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnVolver_Click(object sender, EventArgs e)
         {
-
             frmProveedores Menusovich = new frmProveedores();
             this.Hide();
             Menusovich.Show();

@@ -15,6 +15,5 @@ namespace pryLopezIEvaluativa
                 AD.WriteLine(datosConcatenados); 
                 AD.Close();
             }
-        
     }
 }

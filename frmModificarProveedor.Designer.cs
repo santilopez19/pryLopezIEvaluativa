@@ -245,14 +245,10 @@
             this.Name = "frmModificarProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Proveedor";
-            this.Load += new System.EventHandler(this.frmModificarProveedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
-
         #endregion
-
         private System.Windows.Forms.Label lblLiquidadorResponsable;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblJurisdiccion;

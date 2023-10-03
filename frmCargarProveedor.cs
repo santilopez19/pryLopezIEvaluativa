@@ -16,20 +16,14 @@ namespace pryLopezIEvaluativa
         {
             InitializeComponent();
         }
-
         int numGuia = 6;
         clseArchivo grabado = new clseArchivo();
         private void frmMostrarProveedor_Load(object sender, EventArgs e)
         {
-
             txtGuardarNumero.Text = numGuia.ToString();
         }
-
         public void btnGuardar_Click(object sender, EventArgs e)
         {
-
-
-
             if (txtGuardarEntidad.Text == "")
             {
                 MessageBox.Show("Campo Entidad vacio");
@@ -80,11 +74,8 @@ namespace pryLopezIEvaluativa
                                     else
                                     {
                                         string[] datosProveedores = new string[] { numGuia.ToString(), txtGuardarEntidad.Text, txtGuardarApertura.Text, txtGuardarNExpediente.Text, txtGuardarJuzgado.Text, txtGuardarJurisdiccion.Text, txtGuardarDireccion.Text, txtGuardarLiquidadorResponsable.Text };
-
                                         string datosConcatenados = string.Join(";", datosProveedores);
-
                                         grabado.Grabar(datosConcatenados);
-
                                         numGuia++;
                                         txtGuardarNumero.Text = numGuia.ToString();
                                         txtGuardarEntidad.Clear();
@@ -103,10 +94,8 @@ namespace pryLopezIEvaluativa
                 }
             }
         }
-
         private void btnVolver_Click(object sender, EventArgs e)
         {
-
             frmProveedores Menusovich = new frmProveedores();
             this.Hide();
             Menusovich.Show();

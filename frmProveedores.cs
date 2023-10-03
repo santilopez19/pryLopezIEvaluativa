@@ -144,7 +144,6 @@ namespace pryLopezIEvaluativa
                     leerLinea = sr.ReadLine();
                     separarDatos = leerLinea.Split(';');
                     dgvProveedores.Rows.Add(separarDatos);
-
                 }
                 sr.Close();
             }
