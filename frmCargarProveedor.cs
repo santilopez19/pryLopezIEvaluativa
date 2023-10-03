@@ -17,7 +17,7 @@ namespace pryLopezIEvaluativa
             InitializeComponent();
         }
 
-        int numGuia = 6;
+        int numGuia = 158;
         clseArchivo grabado = new clseArchivo();
         private void frmMostrarProveedor_Load(object sender, EventArgs e)
         {
@@ -107,7 +107,7 @@ namespace pryLopezIEvaluativa
         private void btnVolver_Click(object sender, EventArgs e)
         {
 
-            frmMenu Menusovich = new frmMenu();
+            frmProveedores Menusovich = new frmProveedores();
             this.Hide();
             Menusovich.Show();
         }

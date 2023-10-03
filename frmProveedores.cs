@@ -108,7 +108,7 @@ namespace pryLopezIEvaluativa
 
             if (!grillaCreada)
             {
-                StreamReader sr = new StreamReader("../../Resources");
+                StreamReader sr = new StreamReader("../../Resources/Lista.csv");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -137,7 +137,7 @@ namespace pryLopezIEvaluativa
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
 
-                StreamReader sr = new StreamReader("../../Resources");
+                StreamReader sr = new StreamReader("../../Resources/Lista.csv");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -206,7 +206,7 @@ namespace pryLopezIEvaluativa
 
             if (!grillaCreada)
             {
-                StreamReader sr = new StreamReader("../../Resources");
+                StreamReader sr = new StreamReader(@"../../Resources/Lista.csv");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -235,7 +235,7 @@ namespace pryLopezIEvaluativa
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
 
-                StreamReader sr = new StreamReader("../../Resources");
+                StreamReader sr = new StreamReader("../../Resources/Lista.csv");
 
                 string leerLinea;
                 string[] separarDatos;
