@@ -32,8 +32,8 @@
             this.msProveedores = new System.Windows.Forms.MenuStrip();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cargarProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.msProveedores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,13 @@
             this.listaDeProveedoresToolStripMenuItem.Text = "Lista de Proveedores";
             this.listaDeProveedoresToolStripMenuItem.Click += new System.EventHandler(this.listaDeProveedoresToolStripMenuItem_Click);
             // 
+            // cargarProveedorToolStripMenuItem
+            // 
+            this.cargarProveedorToolStripMenuItem.Name = "cargarProveedorToolStripMenuItem";
+            this.cargarProveedorToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.cargarProveedorToolStripMenuItem.Text = "Cargar Proveedor";
+            this.cargarProveedorToolStripMenuItem.Click += new System.EventHandler(this.cargarProveedorToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -82,13 +89,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // cargarProveedorToolStripMenuItem
-            // 
-            this.cargarProveedorToolStripMenuItem.Name = "cargarProveedorToolStripMenuItem";
-            this.cargarProveedorToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
-            this.cargarProveedorToolStripMenuItem.Text = "Cargar Proveedor";
-            this.cargarProveedorToolStripMenuItem.Click += new System.EventHandler(this.cargarProveedorToolStripMenuItem_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmMenu
             // 

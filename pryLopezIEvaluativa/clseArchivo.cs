@@ -11,7 +11,7 @@ namespace pryLopezIEvaluativa
     {
             public void Grabar(string datosConcatenados)
             {
-                StreamWriter AD = new StreamWriter("../../Resources/Carpetas de Proveedores/Datos Proveedores/datosProveedorConPuntoComa.txt", true);
+                StreamWriter AD = new StreamWriter(@"C:\\Users\\PC\\Desktop\\pryLopezIEvaluativa\\pryLopezIEvaluativa\\Resources\\datosProveedorConPuntoComa.txt", true);
                 AD.WriteLine(datosConcatenados); 
                 AD.Close();
             }
