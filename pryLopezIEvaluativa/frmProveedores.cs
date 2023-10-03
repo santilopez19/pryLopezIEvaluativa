@@ -25,7 +25,7 @@ namespace pryLopezIEvaluativa
         {
             TreeNode rootNode;
 
-            DirectoryInfo info = new DirectoryInfo(@"../../Resources");
+            DirectoryInfo info = new DirectoryInfo(@"C:\\Users\\PC\\Desktop\\pryLopezIEvaluativa\\pryLopezIEvaluativa\\Resources");
             if (info.Exists)
             {
                 rootNode = new TreeNode(info.Name);
@@ -108,8 +108,7 @@ namespace pryLopezIEvaluativa
 
             if (!grillaCreada)
             {
-                // Leemos el archivo de texto y creamos la grilla
-                StreamReader sr = new StreamReader("../../Resources");
+                StreamReader sr = new StreamReader(@"C:\\Users\\PC\\Desktop\\pryLopezIEvaluativa\\pryLopezIEvaluativa\\Resources\\datosProveedorConPuntoComa.txt");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -139,7 +138,7 @@ namespace pryLopezIEvaluativa
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
 
-                StreamReader sr = new StreamReader("../../Resources/Carpetas de Proveedores/Datos Proveedores/datosProveedorConPuntoComa.txt");
+                StreamReader sr = new StreamReader(@"C:\\Users\\PC\\Desktop\\pryLopezIEvaluativa\\pryLopezIEvaluativa\\Resources\\datosProveedorConPuntoComa.txt");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -206,13 +205,14 @@ namespace pryLopezIEvaluativa
         private void lstProveedores_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
 
+
             if (!grillaCreada)
             {
-                StreamReader sr = new StreamReader("../../Resources/");
+                StreamReader sr = new StreamReader(@"C:\\Users\\PC\\Desktop\\pryLopezIEvaluativa\\pryLopezIEvaluativa\\Resources\\datosProveedorConPuntoComa.txt");
+
 
                 string leerLinea;
                 string[] separarDatos;
-
                 leerLinea = sr.ReadLine();
                 separarDatos = leerLinea.Split(';');
 
@@ -228,17 +228,16 @@ namespace pryLopezIEvaluativa
                     dgvProveedores.Rows.Add(separarDatos);
                 }
 
-                sr.Close();
 
                 grillaCreada = true;
             }
+
             else
             {
-                // Actualizamos los datos de la grilla
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
 
-                StreamReader sr = new StreamReader("../../Resourcest");
+                StreamReader sr = new StreamReader(@"C:\\Users\\PC\\Desktop\\pryLopezIEvaluativa\\pryLopezIEvaluativa\\Resources\\datosProveedorConPuntoComa.txt");
 
                 string leerLinea;
                 string[] separarDatos;
@@ -259,7 +258,6 @@ namespace pryLopezIEvaluativa
 
                 }
 
-                sr.Close();
 
             }
 
