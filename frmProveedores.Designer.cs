@@ -79,8 +79,6 @@
             this.lstProveedores.UseCompatibleStateImageBehavior = false;
             this.lstProveedores.View = System.Windows.Forms.View.Details;
             this.lstProveedores.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstProveedores_ItemSelectionChanged);
-            this.lstProveedores.SelectedIndexChanged += new System.EventHandler(this.lstProveedores_SelectedIndexChanged);
-            this.lstProveedores.StyleChanged += new System.EventHandler(this.lstProveedores_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -109,8 +107,6 @@
             this.dgvProveedores.RowHeadersWidth = 51;
             this.dgvProveedores.Size = new System.Drawing.Size(891, 171);
             this.dgvProveedores.TabIndex = 11;
-            this.dgvProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellClick);
-            this.dgvProveedores.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellClick);
             this.dgvProveedores.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProveedores_CellClick);
             this.dgvProveedores.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProveedores_CellClick);
             // 
@@ -142,14 +138,11 @@
             this.Name = "frmProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proveedores";
-            this.Load += new System.EventHandler(this.frmProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.ResumeLayout(false);
 
         }
-
         #endregion
-
         private System.Windows.Forms.TreeView tvwProveedores;
         private System.Windows.Forms.ListView lstProveedores;
         private System.Windows.Forms.ColumnHeader columnHeader1;

@@ -19,7 +19,6 @@ namespace pryLopezIEvaluativa
             InitializeComponent();
             PopulateTreeView();
         }
-
         frmModificarProveedor modificarProveedor = new frmModificarProveedor();
         public void PopulateTreeView()
         {
@@ -58,11 +57,6 @@ namespace pryLopezIEvaluativa
         this.Hide();
         Menusovich.Show();
         }
-
-        private void frmProveedores_Load(object sender, EventArgs e)
-        {
-
-        }
         public void tvwProveedores_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
 
@@ -98,96 +92,13 @@ namespace pryLopezIEvaluativa
                 lstProveedores.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
         }
-
         string leerLinea;
         string[] separarDatos;
         private bool grillaCreada = false;
-        public void lstProveedores_MouseClick(object sender, MouseEventArgs e)
-        {
-
-
-            if (!grillaCreada)
-            {
-                StreamReader sr = new StreamReader("../../Resources/Lista.csv");
-
-                string leerLinea;
-                string[] separarDatos;
-
-                leerLinea = sr.ReadLine();
-                separarDatos = leerLinea.Split(';');
-
-                for (int indice = 0; indice < separarDatos.Length; indice++)
-                {
-                    dgvProveedores.Columns.Add(separarDatos[indice], separarDatos[indice]);
-                }
-
-                while (sr.EndOfStream == false)
-                {
-                    leerLinea = sr.ReadLine();
-                    separarDatos = leerLinea.Split(';');
-                    dgvProveedores.Rows.Add(separarDatos);
-                }
-
-                sr.Close();
-
-                grillaCreada = true;
-            }
-            else
-            {
-                dgvProveedores.Rows.Clear();
-                dgvProveedores.Columns.Clear();
-
-                StreamReader sr = new StreamReader("../../Resources/Lista.csv");
-
-                string leerLinea;
-                string[] separarDatos;
-
-                leerLinea = sr.ReadLine();
-                separarDatos = leerLinea.Split(';');
-
-                for (int indice = 0; indice < separarDatos.Length; indice++)
-                {
-                    dgvProveedores.Columns.Add(separarDatos[indice], separarDatos[indice]);
-                }
-
-                while (sr.EndOfStream == false)
-                {
-                    leerLinea = sr.ReadLine();
-                    separarDatos = leerLinea.Split(';');
-                    dgvProveedores.Rows.Add(separarDatos);
-
-                }
-
-                sr.Close();
-
-            }
-        }
         public static int pos = 0;
-        private void dgvProveedores_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            pos = dgvProveedores.CurrentRow.Index;
-
-            modificarProveedor.txtModificarNumero.Text = dgvProveedores[0, pos].Value.ToString();
-            modificarProveedor.txtModificarEntidad.Text = dgvProveedores[1, pos].Value.ToString();
-            modificarProveedor.txtModificarApertura.Text = dgvProveedores[2, pos].Value.ToString();
-            modificarProveedor.txtModificarNExpediente.Text = dgvProveedores[3, pos].Value.ToString();
-            modificarProveedor.txtModificarJuzgado.Text = dgvProveedores[4, pos].Value.ToString();
-            modificarProveedor.txtModificarJurisdiccion.Text = dgvProveedores[5, pos].Value.ToString();
-            modificarProveedor.txtModificarDireccion.Text = dgvProveedores[6, pos].Value.ToString();
-            modificarProveedor.txtModificarLiquidadorResponsable.Text = dgvProveedores[7, pos].Value.ToString();
-
-            this.Hide();
-            modificarProveedor.Show();
-        }
-        private void lstProveedores_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         public void dgvProveedores_CellClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             pos = dgvProveedores.CurrentRow.Index;
-
             modificarProveedor.txtModificarNumero.Text = dgvProveedores[0, pos].Value.ToString();
             modificarProveedor.txtModificarEntidad.Text = dgvProveedores[1, pos].Value.ToString();
             modificarProveedor.txtModificarApertura.Text = dgvProveedores[2, pos].Value.ToString();
@@ -196,70 +107,52 @@ namespace pryLopezIEvaluativa
             modificarProveedor.txtModificarJurisdiccion.Text = dgvProveedores[5, pos].Value.ToString();
             modificarProveedor.txtModificarDireccion.Text = dgvProveedores[6, pos].Value.ToString();
             modificarProveedor.txtModificarLiquidadorResponsable.Text = dgvProveedores[7, pos].Value.ToString();
-
             this.Hide();
             modificarProveedor.Show();
         }
-
         private void lstProveedores_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-
             if (!grillaCreada)
             {
                 StreamReader sr = new StreamReader(@"../../Resources/Lista.csv");
-
                 string leerLinea;
                 string[] separarDatos;
-
                 leerLinea = sr.ReadLine();
                 separarDatos = leerLinea.Split(';');
-
                 for (int indice = 0; indice < separarDatos.Length; indice++)
                 {
                     dgvProveedores.Columns.Add(separarDatos[indice], separarDatos[indice]);
                 }
-
                 while (sr.EndOfStream == false)
                 {
                     leerLinea = sr.ReadLine();
                     separarDatos = leerLinea.Split(';');
                     dgvProveedores.Rows.Add(separarDatos);
                 }
-
                 sr.Close();
-
                 grillaCreada = true;
             }
             else
             {
                 dgvProveedores.Rows.Clear();
                 dgvProveedores.Columns.Clear();
-
                 StreamReader sr = new StreamReader("../../Resources/Lista.csv");
-
                 string leerLinea;
                 string[] separarDatos;
-
                 leerLinea = sr.ReadLine();
                 separarDatos = leerLinea.Split(';');
-
                 for (int indice = 0; indice < separarDatos.Length; indice++)
                 {
                     dgvProveedores.Columns.Add(separarDatos[indice], separarDatos[indice]);
                 }
-
                 while (sr.EndOfStream == false)
                 {
                     leerLinea = sr.ReadLine();
                     separarDatos = leerLinea.Split(';');
                     dgvProveedores.Rows.Add(separarDatos);
-
                 }
-
                 sr.Close();
-
             }
-
         }
     }
 }
