@@ -17,40 +17,8 @@ namespace pryLopezIEvaluativa
         public frmProveedores()
         {
             InitializeComponent();
-            PopulateTreeView();
         }
         frmModificarProveedor modificarProveedor = new frmModificarProveedor();
-        public void PopulateTreeView()
-        {
-            TreeNode rootNode;
-
-            DirectoryInfo info = new DirectoryInfo(@"../../Resources");
-            if (info.Exists)
-            {
-                rootNode = new TreeNode(info.Name);
-                rootNode.Tag = info;
-                GetDirectories(info.GetDirectories(), rootNode);
-                tvwProveedores.Nodes.Add(rootNode);
-            }
-        }
-        public void GetDirectories(DirectoryInfo[] subDirs,
-            TreeNode nodeToAddTo)
-        {
-            TreeNode aNode;
-            DirectoryInfo[] subSubDirs;
-            foreach (DirectoryInfo subDir in subDirs)
-            {
-                aNode = new TreeNode(subDir.Name, 0, 0);
-                aNode.Tag = subDir;
-                aNode.ImageKey = "folder";
-                subSubDirs = subDir.GetDirectories();
-                if (subSubDirs.Length != 0)
-                {
-                    GetDirectories(subSubDirs, aNode);
-                }
-                nodeToAddTo.Nodes.Add(aNode);
-            }
-        }
         private void btnVolver_Click(object sender, EventArgs e)
         {
         frmMenu Menusovich = new frmMenu();
@@ -153,6 +121,48 @@ namespace pryLopezIEvaluativa
                 }
                 sr.Close();
             }
+        }
+
+        private void frmProveedores_Load(object sender, EventArgs e)
+        {
+            string rutaRaiz = "../../Resources/Lista.csv"; // Cambia esto a la ubicación que desees mostrar en el TreeView
+
+            // Agrega un nodo raíz al TreeView
+            TreeNode rootNode = new TreeNode(rutaRaiz);
+            tvwProveedores.Nodes.Add(rootNode);
+
+            // Llama a una función para llenar el TreeView con los archivos y carpetas
+            LlenarTreeView(rootNode, rutaRaiz);
+        }
+        private void LlenarTreeView(TreeNode parentNode, string ruta)
+        {
+            try
+            {
+                // Obtiene la lista de carpetas en la ruta actual
+                string[] carpetas = Directory.GetDirectories(ruta);
+
+                // Agrega cada carpeta como un nodo al TreeView
+                foreach (string carpeta in carpetas)
+                {
+                    TreeNode folderNode = new TreeNode(Path.GetFileName(carpeta));
+                    parentNode.Nodes.Add(folderNode);
+
+                    // Llama recursivamente a la función para las subcarpetas
+                    LlenarTreeView(folderNode, carpeta);
+                }
+
+                // Obtiene la lista de archivos en la ruta actual
+                string[] archivos = Directory.GetFiles(ruta);
+
+                // Agrega cada archivo como un nodo al TreeView
+                foreach (string archivo in archivos)
+                {
+                    TreeNode fileNode = new TreeNode(Path.GetFileName(archivo));
+                    parentNode.Nodes.Add(fileNode);
+                }
+            }
+            finally 
+            {}
         }
     }
 }
