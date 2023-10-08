@@ -217,39 +217,86 @@ namespace pryLopezIEvaluativa
             //modificarProveedor.Show();: Muestra el formulario modificarProveedor, que probablemente sea un formulario de edición o modificación de datos de proveedores.Esto permite al usuario realizar cambios en los datos del proveedor seleccionado en el DataGridView.
             modificarProveedor.Show();
         }
-        
-//En resumen, este código se utiliza para capturar los datos de una fila seleccionada en el DataGridView y mostrarlos en el formulario modificarProveedor para que el usuario pueda realizar modificaciones en esos datos.Después de obtener los datos y mostrar el formulario de modificación, el formulario actual se oculta (Hide()) para que el usuario pueda interactuar con el formulario de modificación.
+
+        //En resumen, este código se utiliza para capturar los datos de una fila seleccionada en el DataGridView y mostrarlos en el formulario modificarProveedor para que el usuario pueda realizar modificaciones en esos datos.Después de obtener los datos y mostrar el formulario de modificación, el formulario actual se oculta (Hide()) para que el usuario pueda interactuar con el formulario de modificación.
 
 
 
 
 
+        //        El código que proporcionaste parece estar relacionado con la carga y visualización de datos en un DataGridView llamado dgvProveedores desde un archivo CSV.A continuación, se describe cada línea de código:
         private void lstProveedores_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
+
+            //if (!grillaCreada): Esto verifica si la variable booleana grillaCreada es false. Si es la primera vez que se carga la grilla(es decir, grillaCreada es false), se ejecutará el código dentro de este bloque.
             if (!grillaCreada)
             {
+
+
+                //StreamReader sr = new StreamReader(@"../../Resources/Lista.csv");: Se crea un objeto StreamReader llamado sr para leer el archivo CSV llamado "Lista.csv". El camino al archivo se especifica como../../Resources/Lista.csv.Esto asume que el archivo se encuentra en un directorio relativo a la ubicación de la aplicación.
                 StreamReader sr = new StreamReader(@"../../Resources/Lista.csv");
+
+                //string leerLinea;: Declara una variable leerLinea para almacenar una línea del archivo CSV.
+
                 string leerLinea;
+
+                //string[] separarDatos;: Declara un arreglo de cadenas llamado separarDatos para dividir los datos de una línea en campos separados por el carácter; (punto y coma).
                 string[] separarDatos;
+
+                //leerLinea = sr.ReadLine();: Lee la primera línea del archivo CSV y la almacena en la variable leerLinea.
+
                 leerLinea = sr.ReadLine();
+
+                //separarDatos = leerLinea.Split(';');: Divide la línea leída en campos utilizando el carácter ; como delimitador y almacena los campos en el arreglo separarDatos.Esto se hace asumiendo que el archivo CSV tiene campos separados por punto y coma.
+
                 separarDatos = leerLinea.Split(';');
+
+                //for (int indice = 0; indice<separarDatos.Length; indice++): Inicia un bucle for que recorre los elementos en el arreglo separarDatos.
                 for (int indice = 0; indice < separarDatos.Length; indice++)
                 {
+
+                    //dgvProveedores.Columns.Add(separarDatos[indice], separarDatos[indice]);: Agrega una columna al DataGridView(dgvProveedores) utilizando el valor en separarDatos[indice] como nombre de la columna.Esto crea las columnas en el DataGridView basadas en los encabezados del archivo CSV.
                     dgvProveedores.Columns.Add(separarDatos[indice], separarDatos[indice]);
                 }
+
+
+                //while (sr.EndOfStream == false): Inicia un bucle while que se ejecuta mientras no se llegue al final del archivo CSV.
                 while (sr.EndOfStream == false)
                 {
+
+                    //leerLinea = sr.ReadLine();: Lee la siguiente línea del archivo CSV y la almacena en la variable leerLinea.
                     leerLinea = sr.ReadLine();
+
+                    //separarDatos = leerLinea.Split(';');: Divide la nueva línea en campos y almacena los campos en el arreglo separarDatos.
                     separarDatos = leerLinea.Split(';');
+
+                    //dgvProveedores.Rows.Add(separarDatos);: Agrega una nueva fila al DataGridView(dgvProveedores) utilizando los datos en separarDatos.
                     dgvProveedores.Rows.Add(separarDatos);
                 }
+
+                //sr.Close();: Cierra el archivo CSV después de leer todos los datos.
                 sr.Close();
+
+
+                //grillaCreada = true;: Establece la variable grillaCreada como true para indicar que la grilla se ha creado y cargado con los datos del archivo CSV.
                 grillaCreada = true;
             }
+
+            //}: Fin del bloque de código que se ejecuta si grillaCreada es false.
+
+
+            //else: Inicio del bloque de código que se ejecuta si grillaCreada es true.
             else
             {
+
+
+                //dgvProveedores.Rows.Clear();: Borra todas las filas del DataGridView(dgvProveedores) para limpiar los datos existentes.
                 dgvProveedores.Rows.Clear();
+
+                //dgvProveedores.Columns.Clear();: Borra todas las columnas del DataGridView para limpiar los encabezados de columna existentes.
                 dgvProveedores.Columns.Clear();
+
+                //Se repite el proceso desde el punto 3 para abrir nuevamente el archivo CSV, leer los encabezados y datos, y agregarlos al DataGridView.
                 StreamReader sr = new StreamReader("../../Resources/Lista.csv");
                 string leerLinea;
                 string[] separarDatos;
@@ -265,55 +312,13 @@ namespace pryLopezIEvaluativa
                     separarDatos = leerLinea.Split(';');
                     dgvProveedores.Rows.Add(separarDatos);
                 }
+
+                //sr.Close();: Cierra el archivo CSV después de leer todos los datos nuevamente.
                 sr.Close();
+
+
+                //En resumen, este código carga y muestra datos desde un archivo CSV en un DataGridView, y si la grilla ya se ha creado(grillaCreada es true), se borran las filas y columnas existentes antes de cargar los datos nuevamente desde el archivo CSV.
             }
         }
-
-//        El código que proporcionaste parece estar relacionado con la carga y visualización de datos en un DataGridView llamado dgvProveedores desde un archivo CSV.A continuación, se describe cada línea de código:
-
-//if (!grillaCreada): Esto verifica si la variable booleana grillaCreada es false. Si es la primera vez que se carga la grilla(es decir, grillaCreada es false), se ejecutará el código dentro de este bloque.
-
-//{: Inicio del bloque de código que se ejecuta si grillaCreada es false.
-
-//StreamReader sr = new StreamReader(@"../../Resources/Lista.csv");: Se crea un objeto StreamReader llamado sr para leer el archivo CSV llamado "Lista.csv". El camino al archivo se especifica como../../Resources/Lista.csv.Esto asume que el archivo se encuentra en un directorio relativo a la ubicación de la aplicación.
-
-//string leerLinea;: Declara una variable leerLinea para almacenar una línea del archivo CSV.
-
-//string[] separarDatos;: Declara un arreglo de cadenas llamado separarDatos para dividir los datos de una línea en campos separados por el carácter; (punto y coma).
-
-//leerLinea = sr.ReadLine();: Lee la primera línea del archivo CSV y la almacena en la variable leerLinea.
-
-//separarDatos = leerLinea.Split(';');: Divide la línea leída en campos utilizando el carácter ; como delimitador y almacena los campos en el arreglo separarDatos.Esto se hace asumiendo que el archivo CSV tiene campos separados por punto y coma.
-
-//for (int indice = 0; indice<separarDatos.Length; indice++): Inicia un bucle for que recorre los elementos en el arreglo separarDatos.
-
-//dgvProveedores.Columns.Add(separarDatos[indice], separarDatos[indice]);: Agrega una columna al DataGridView(dgvProveedores) utilizando el valor en separarDatos[indice] como nombre de la columna.Esto crea las columnas en el DataGridView basadas en los encabezados del archivo CSV.
-
-//while (sr.EndOfStream == false): Inicia un bucle while que se ejecuta mientras no se llegue al final del archivo CSV.
-
-//leerLinea = sr.ReadLine();: Lee la siguiente línea del archivo CSV y la almacena en la variable leerLinea.
-
-//separarDatos = leerLinea.Split(';');: Divide la nueva línea en campos y almacena los campos en el arreglo separarDatos.
-
-//dgvProveedores.Rows.Add(separarDatos);: Agrega una nueva fila al DataGridView(dgvProveedores) utilizando los datos en separarDatos.
-
-//sr.Close();: Cierra el archivo CSV después de leer todos los datos.
-
-//grillaCreada = true;: Establece la variable grillaCreada como true para indicar que la grilla se ha creado y cargado con los datos del archivo CSV.
-
-//}: Fin del bloque de código que se ejecuta si grillaCreada es false.
-
-//else: Inicio del bloque de código que se ejecuta si grillaCreada es true.
-
-//dgvProveedores.Rows.Clear();: Borra todas las filas del DataGridView(dgvProveedores) para limpiar los datos existentes.
-
-//dgvProveedores.Columns.Clear();: Borra todas las columnas del DataGridView para limpiar los encabezados de columna existentes.
-
-//Se repite el proceso desde el punto 3 para abrir nuevamente el archivo CSV, leer los encabezados y datos, y agregarlos al DataGridView.
-
-//sr.Close();: Cierra el archivo CSV después de leer todos los datos nuevamente.
-
-//En resumen, este código carga y muestra datos desde un archivo CSV en un DataGridView, y si la grilla ya se ha creado(grillaCreada es true), se borran las filas y columnas existentes antes de cargar los datos nuevamente desde el archivo CSV.
-
     }
 }
