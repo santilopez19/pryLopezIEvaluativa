@@ -47,11 +47,10 @@
             this.tvwProveedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tvwProveedores.ImageIndex = 0;
             this.tvwProveedores.ImageList = this.imageListTreeViewProveedores;
-            this.tvwProveedores.Location = new System.Drawing.Point(13, 13);
-            this.tvwProveedores.Margin = new System.Windows.Forms.Padding(4);
+            this.tvwProveedores.Location = new System.Drawing.Point(10, 11);
             this.tvwProveedores.Name = "tvwProveedores";
             this.tvwProveedores.SelectedImageIndex = 0;
-            this.tvwProveedores.Size = new System.Drawing.Size(358, 298);
+            this.tvwProveedores.Size = new System.Drawing.Size(268, 242);
             this.tvwProveedores.TabIndex = 3;
             this.tvwProveedores.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvwProveedores_NodeMouseClick);
             // 
@@ -71,9 +70,10 @@
             this.columnHeader3});
             this.lstProveedores.HideSelection = false;
             this.lstProveedores.LargeImageList = this.imageListTreeViewProveedores;
-            this.lstProveedores.Location = new System.Drawing.Point(378, 13);
+            this.lstProveedores.Location = new System.Drawing.Point(284, 11);
+            this.lstProveedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstProveedores.Name = "lstProveedores";
-            this.lstProveedores.Size = new System.Drawing.Size(526, 298);
+            this.lstProveedores.Size = new System.Drawing.Size(394, 242);
             this.lstProveedores.SmallImageList = this.imageListTreeViewProveedores;
             this.lstProveedores.TabIndex = 10;
             this.lstProveedores.UseCompatibleStateImageBehavior = false;
@@ -101,11 +101,10 @@
             this.dgvProveedores.BackgroundColor = System.Drawing.Color.White;
             this.dgvProveedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProveedores.Location = new System.Drawing.Point(13, 318);
-            this.dgvProveedores.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvProveedores.Location = new System.Drawing.Point(10, 258);
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.RowHeadersWidth = 51;
-            this.dgvProveedores.Size = new System.Drawing.Size(891, 171);
+            this.dgvProveedores.Size = new System.Drawing.Size(668, 139);
             this.dgvProveedores.TabIndex = 11;
             this.dgvProveedores.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProveedores_CellClick);
             this.dgvProveedores.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProveedores_CellClick);
@@ -114,10 +113,9 @@
             // 
             this.btnVolver.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnVolver.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnVolver.Location = new System.Drawing.Point(13, 497);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Location = new System.Drawing.Point(10, 404);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(100, 28);
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 12;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
@@ -125,19 +123,21 @@
             // 
             // frmProveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(916, 534);
+            this.ClientSize = new System.Drawing.Size(687, 434);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.dgvProveedores);
             this.Controls.Add(this.lstProveedores);
             this.Controls.Add(this.tvwProveedores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proveedores";
+            this.Load += new System.EventHandler(this.frmProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.ResumeLayout(false);
 

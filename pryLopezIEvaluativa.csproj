@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clseArchivo.cs" />
+    <Compile Include="clsLogins.cs" />
     <Compile Include="frmCargaInicio.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -148,5 +148,10 @@ namespace pryLopezIEvaluativa
                 sr.Close();
             }
         }
+
+        private void frmProveedores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
